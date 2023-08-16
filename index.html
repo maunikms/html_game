@@ -152,13 +152,15 @@
 			setFood();
 		}
 
+		var FPS = 10;
 		
 		function loop() {
-			update();
-			draw();
-			
-			window.requestAnimationFrame(loop, canvas);
-		}
+    setTimeout(function() {
+        update();
+        draw();
+        window.requestAnimationFrame(loop, canvas);
+    }, 1000 / FPS);
+}
 
 		
 		function update() {
